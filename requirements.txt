@@ -1,0 +1,8 @@
+gcp-cli
+ncclient
+netaddr
+paramiko
+hvac
+PyNaCl
+pynacl
+requests

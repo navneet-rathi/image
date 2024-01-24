@@ -1,0 +1,7 @@
+{
+"hostipHA":"https://internal-api.arconpam.com/",
+"username":"dmF1bHR1c2Vy",
+"password":"QXJjb25WYXVsdEAyMDIz",
+"ansible_exe_path" : "/home/runner" 
+}
+

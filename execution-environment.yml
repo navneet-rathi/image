@@ -1,0 +1,22 @@
+---
+version: 1
+
+build_arg_defaults:
+  EE_BASE_IMAGE: 'aap2.example.com/ee-minimal-rhel8:latest'
+  ANSIBLE_GALAXY_CLI_COLLECTION_OPTS: '--ignore-certs'
+
+ansible_config: 'ansible.cfg'
+
+
+dependencies:
+  galaxy: requirements.yml
+  python: requirements.txt
+  system: bindep.txt
+
+additional_build_steps:
+  prepend: |
+    COPY arconplugin.py  /usr/share/ansible/plugins/lookup/arconplugin.py 
+    COPY config.json  /usr/share/ansible/plugins/lookup/config.json
+  append:
+    - RUN ansible --version
+    - RUN ls -la /usr/share/ansible/plugins/lookup  
