@@ -1,108 +1,10 @@
-Last login: Fri Feb 16 15:12:02 on ttys000
-navneetrathi@Navneets-MacBook-Pro ~ % ssh root@192.168.1.11
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
-Someone could be eavesdropping on you right now (man-in-the-middle attack)!
-It is also possible that a host key has just been changed.
-The fingerprint for the ED25519 key sent by the remote host is
-SHA256:KO3JfyQrNG7c/peXGDgqtJ+Jc7VuHuDOgGjhrwgFOo8.
-Please contact your system administrator.
-Add correct host key in /Users/navneetrathi/.ssh/known_hosts to get rid of this message.
-Offending ECDSA key in /Users/navneetrathi/.ssh/known_hosts:14
-Host key for 192.168.1.11 has changed and you have requested strict checking.
-Host key verification failed.
-navneetrathi@Navneets-MacBook-Pro ~ % ssh-keygen -R 192.168.1.11
-# Host 192.168.1.11 found: line 12
-# Host 192.168.1.11 found: line 13
-# Host 192.168.1.11 found: line 14
-/Users/navneetrathi/.ssh/known_hosts updated.
-Original contents retained as /Users/navneetrathi/.ssh/known_hosts.old
-navneetrathi@Navneets-MacBook-Pro ~ % ssh root@192.168.1.11     
-The authenticity of host '192.168.1.11 (192.168.1.11)' can't be established.
-ED25519 key fingerprint is SHA256:KO3JfyQrNG7c/peXGDgqtJ+Jc7VuHuDOgGjhrwgFOo8.
-This host key is known by the following other names/addresses:
-    ~/.ssh/known_hosts:25: 192.168.1.13
-    ~/.ssh/known_hosts:51: 192.168.1.16
-Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
-Warning: Permanently added '192.168.1.11' (ED25519) to the list of known hosts.
-root@192.168.1.11's password: 
-
-
-Permission denied, please try again.
-root@192.168.1.11's password: 
-Activate the web console with: systemctl enable --now cockpit.socket
-
-Last failed login: Tue Feb 20 16:48:36 IST 2024 from 192.168.1.5 on ssh:notty
-There was 1 failed login attempt since the last successful login.
-Last login: Tue Feb 20 15:32:12 2024
-[root@aap1 ~]# 
-[root@aap1 ~]# 
-[root@aap1 ~]# 
-[root@aap1 ~]# ls
-anaconda-ks.cfg                                                         jinja_1.yml
-ansible-automation-platform-setup-bundle-2.4-3-aarch64                  jinja.yml
-ansible-automation-platform-setup-bundle-2.4-3-aarch64.tar.gz           json2ini.py
-ansible.log                                                             pass
-ansible.yaml                                                            patching
-arconplugin.py                                                          playbook.yml
-arcon.yml                                                               play.yml
-cffi-1.16.0-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl  pycparser-2.21-py2.py3-none-any.whl
-EE                                                                      PyNaCl-1.5.0-cp36-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.manylinux_2_24_aarch64.whl
-EE_arcon                                                                templates
-EE_from                                                                 unseal.sh
-EE_twilio                                                               vault
-Email                                                                   zip
-[root@aap1 ~]# cd EE_arcon/
-[root@aap1 EE_arcon]# ls
-ansible.cfg  bindep.txt  context  execution-environment.yml  images.tar  requirements.txt  requirements.yml  requirements.yml.old
-[root@aap1 EE_arcon]# cd context/
-[root@aap1 context]# l
--bash: l: command not found
-[root@aap1 context]# ls
-arconplugin.py  _build  config.json  Containerfile
-[root@aap1 context]# vim arconplugin.py 
-[root@aap1 context]# 
-[root@aap1 context]# ls
-arconplugin.py  _build  config.json  Containerfile
-[root@aap1 context]# cd ..
-[root@aap1 EE_arcon]# ls
-ansible.cfg  bindep.txt  context  execution-environment.yml  images.tar  requirements.txt  requirements.yml  requirements.yml.old
-[root@aap1 EE_arcon]# cd ..
-[root@aap1 ~]# ls
-anaconda-ks.cfg                                                         jinja_1.yml
-ansible-automation-platform-setup-bundle-2.4-3-aarch64                  jinja.yml
-ansible-automation-platform-setup-bundle-2.4-3-aarch64.tar.gz           json2ini.py
-ansible.log                                                             pass
-ansible.yaml                                                            patching
-arconplugin.py                                                          playbook.yml
-arcon.yml                                                               play.yml
-cffi-1.16.0-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl  pycparser-2.21-py2.py3-none-any.whl
-EE                                                                      PyNaCl-1.5.0-cp36-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.manylinux_2_24_aarch64.whl
-EE_arcon                                                                templates
-EE_from                                                                 unseal.sh
-EE_twilio                                                               vault
-Email                                                                   zip
-[root@aap1 ~]# cd EE_
-EE_arcon/  EE_from/   EE_twilio/ 
-[root@aap1 ~]# cd EE_
-EE_arcon/  EE_from/   EE_twilio/ 
-[root@aap1 ~]# cd EE_from/
-[root@aap1 EE_from]# l;s
--bash: l: command not found
--bash: s: command not found
-[root@aap1 EE_from]# ls
-ansible.cfg  bindep.txt  context  execution-environment.yml  requirements.txt  requirements.yml  requirements.yml.old
-[root@aap1 EE_from]# vim context/
-
 #!/usr/bin/env python
 
 from __future__ import (absolute_import, division, print_function)
 __metaclass__ = type
 import requests
 import json
-import os
+import os 
 import nacl.secret
 import nacl.utils
 import codecs
@@ -147,4 +49,140 @@ class arconPlugin(object):
             headers = {
               'Content-Type': 'application/x-www-form-urlencoded',
               'User-Agent': 'PostmanRuntime/7.36.0'
-                                                                                                                                                        1,1           Top
+            }
+            response = requests.request("POST", url, headers=headers, data = payload)
+            tokens = json.loads(response.text)
+            token = tokens.get("access_token")
+        except:
+            try:
+                url = data['hostipDR']+"/arconToken"
+                payload = 'username='+data['username']+'&password='+data['password']+'&grant_type=password'
+                headers = {
+                  'Content-Type': 'application/x-www-form-urlencoded',
+                  'User-Agent': 'PostmanRuntime/7.36.0'
+                }
+
+                response = requests.request("POST", url, headers=headers, data = payload, verify=False)
+                tokens = json.loads(response.text)
+                token = tokens.get("access_token")
+            except:
+                return "Network Failure"
+
+        #print(token)
+        if token != "" :
+            try:
+                url = data['hostipHA']+"/api/ServicePassword/GetTargetDevicePassKey"
+                payload = json.dumps([
+                    {
+                        "ServerIp" : ip,
+                        "ServiceTypeID" : service_type,
+                        "UserName" : username, 
+                        "DbInstanceName": "",
+                        "OpenForHours" : "1"
+                    }
+                ])
+                headers = {
+                  'User-Agent': 'PostmanRuntime/7.36.0',
+                  'Content-Type': 'application/json',
+                  'Authorization': 'Bearer '+token
+                }
+   
+                response = requests.request("POST", url, headers=headers, data=payload, verify=False)
+                passd = json.loads(response.text)
+                return passd.get("Result")[0].get("Password")
+                
+            except:
+                try:
+                    url = data['hostipDR']+"/api/ServicePassword/GetTargetDevicePassKey"
+
+                    payload = json.dumps([
+                        {
+                            "ServerIp" : ip,
+                            "ServiceTypeID" : service_type,
+                            "UserName" : username, 
+                            "DbInstanceName": "",
+                            "OpenForHours" : "1"
+                        }
+                    ])
+                    headers = {
+                      'User-Agent': 'PostmanRuntime/7.36.0',
+                      'Content-Type': 'application/json',
+                      'Authorization': 'Bearer '+token
+                    }
+
+                    response = requests.request("POST", url, headers=headers, data=payload, verify=False)
+                    passd = json.loads(response.text)
+                    return passd.get("Result")[0].get("Password")
+                except:
+                    
+                    return "Network Failure"
+
+
+
+# python 3 headers, required if submitting to Ansible
+from ansible.errors import AnsibleError, AnsibleParserError
+from ansible.plugins.lookup import LookupBase
+from ansible.utils.display import Display
+
+display = Display()
+
+DOCUMENTATION = """
+    name: Arcon Ansible Plugin
+    version_added: "1.2"
+    author:
+      - Arcon Tech Solutions
+    short_description: retrieve password from Arcon PAM
+    description:
+      - Retrieves keys from Arcon PAM Vault 
+"""
+
+class LookupModule(LookupBase):
+
+
+
+    def run(self, terms, variables=None, **kwargs):
+
+        #print(terms)
+        # lookups in general are expected to both take a list as input and output a list
+        # this is done so they work with the looping construct 'with_'.
+        ret = []
+        pwd = ""
+        logging.basicConfig(filename='ansible.log' , filemode='w', format='%(name)s - %(levelname)s - %(message)s')
+        logging.warning("Starting with the Ansible implementation")
+        # terms=['path=/192.168.1.13//root']
+        logging.warning(terms)
+        terms = ' '.join(terms)
+        parts=terms.split('/')
+        ip=parts[1]
+        service_type=parts[2]
+        username=parts[3]
+        logging.warning("IPUser Variable me ye gaya hai: {}".format(ip))
+        logging.warning("Service type Variable me ye gaya hai: {}".format(service_type))
+        logging.warning("username Variable me ye gaya hai: {}".format(username))
+        try:
+            arcon = arconPlugin()
+            logging.warning("Inside IPUser variable = 2 | this is what will go into fetching the Password for The IP {} and the user {} and the service {}".format(ip, username , service_type))
+            pwd = arcon.getPassword(ip,username,service_type)
+            
+            logging.warning("This is the password returned from the ARCON API {}".format(pwd))
+        except:
+            raise AnsibleError("could not locate password in PAM for service: %s" % terms)  
+        if pwd != "":
+            conf = open('/usr/share/ansible/plugins/lookup/config.json')
+            data = json.load(conf)
+            ansible_execution_path = data["ansible_exe_path"]
+            bash_file =ansible_execution_path +  "/.bash_profile"
+            file1 = open(bash_file, "a")  # append mode
+            #lines = '\nexport {}="{}"'.format(keys[x] , pwd)
+            lines = '\nexport ANS_PASSWORD="{}"'.format(pwd)
+            file1.write(lines)
+            file1.close()
+            cmd = "source "+ ansible_execution_path +"/.bash_profile"
+            logging.warning("This is the path and the env variable set {}".format(ansible_execution_path))
+            os.system(cmd)                        
+            if pwd != "Network Failure":
+                print("We have build it successfully...!")
+                #pwd = "Keys generated successfully."
+        else:
+            pwd = "Key generation failed."
+        return pwd
